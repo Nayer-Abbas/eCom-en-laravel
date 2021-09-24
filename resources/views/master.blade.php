@@ -26,5 +26,25 @@
   .slider-text{
     background-color: #35443585 !important;
   }
+  .treding-item{
+    height: 100px;
+    width: 100px; 
+  }
+  .treding-item{ 
+    float: left;
+    width: 20%;
+  }
+  .trending-wrapper{
+    margin: 30px;
+  }
+  .detail-img{
+    height: 200px
+  }
+  .search-box{
+    width: 500px !important;
+  }
+  .trending-image{
+    height: 100px;
+  }
 </style>
 </html>

@@ -15,11 +15,13 @@
   <div class="carousel-inner">
     @foreach ($products as $item)
     <div class="item {{$item['id']==23?'active':''}}">
+      <a href="detail/{{$item['id']}}">
     <img class="slider-img" src="{{$item['gallery']}}">
     <div class="carousel-caption slider-text">
         <h3>{{$item['name']}}</h3>
         <p>{{$item['description']}}</p>
       </div>
+      </a>
     </div>
     @endforeach
 
@@ -33,7 +35,16 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<div class="row" style="padding:50px; 0px">
+@foreach ($products as $item)
+    <div class="col-md-3 border border-danger" style="margin-bottom:20px;">
+    <a href="detail/{{$item['id']}}">    
+    <img src="{{$item['gallery']}}" alt="" width="100%">
+        <a style="display:block; text-align:center; font-size:16px; text-decoration:none;">{{$item['name']}}</a>
+        <p class="text-center">(Price: {{$item['price']}}$ )</p>
+        </a>
+      </div>
+@endforeach
 </div>
 
-@endsection
+@endsection 

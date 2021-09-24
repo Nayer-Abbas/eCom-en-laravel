@@ -3,6 +3,8 @@
 <div class="container">
 <br>
 <h2>Product in Cart</h2>
+<a class="btn btn-success" href="ordernow">Order Now</a>
+<br>
 <br>
 @foreach ($products as $item)
     <div class="row cart-list-devider">

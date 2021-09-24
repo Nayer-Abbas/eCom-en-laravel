@@ -41,7 +41,7 @@
     <a href="detail/{{$item['id']}}">    
     <img src="{{$item['gallery']}}" alt="" width="100%">
         <a style="display:block; text-align:center; font-size:16px; text-decoration:none;">{{$item['name']}}</a>
-        <p class="text-center">(Price: {{$item['price']}}$ )</p>
+        <p class="text-center">(Price: {{$item['price']}} )</p>
         </a>
       </div>
 @endforeach

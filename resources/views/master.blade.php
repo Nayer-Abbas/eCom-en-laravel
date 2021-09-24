@@ -46,5 +46,19 @@
   .trending-image{
     height: 100px;
   }
+  .cart-list-devider{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .cart-items{
+    margin-left: 70px;
+  }
+  .ecom-footer{
+    background-color: silver;
+  }
+  .footer-text{
+    margin-left:420px;
+  }
 </style>
 </html>

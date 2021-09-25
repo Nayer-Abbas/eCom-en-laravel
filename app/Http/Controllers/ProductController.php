@@ -33,19 +33,19 @@ class ProductController extends Controller
             $cart->user_id=$req->session()->get('user')['id'];
             $cart->product_id=$req->product_id;
             $cart->save();
-            return redirect("/");
+            return redirect('Cartlist');
         }
         else
         {        
             return redirect('/login');
         }
     }
-        static function cartItem()
+    static function cartItem()
         {
             $userId=Session::get('user')['id'];
             return Cart::where('user_id', $userId)->count();
         }
-        function CartList()
+    function CartList()
         {
             $userId = Session::get('user')['id'];
             $data = DB::table('cart')
@@ -55,12 +55,12 @@ class ProductController extends Controller
             ->get();
             return view('cartlist', ['products'=>$data]);
         }
-        function removeCart($id)
+    function removeCart($id)
         {
             cart::destroy($id);
             return redirect('Cartlist');
         }
-        function orderNow()
+    function orderNow()
         {
             $userId = Session::get('user')['id'];
             $total = $products = DB::table('cart')
@@ -70,7 +70,7 @@ class ProductController extends Controller
             ->sum('products.price');
             return view('ordernow', ['total'=>$total]);
         }
-        function orderPlace(Request $req)
+    function orderPlace(Request $req)
         {
             $userId = Session::get('user')['id'];
             $allCart = Cart::where('user_id', $userId)->get();
@@ -89,7 +89,7 @@ class ProductController extends Controller
             $req->input();
             return redirect('/');
         }
-        function myOrder()
+    function myOrder()
         {
             $userId = Session::get('user')['id'];
             $orders =  DB::table('orders')

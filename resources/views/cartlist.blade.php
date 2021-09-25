@@ -14,8 +14,10 @@
             </a>
         </div>
         <div class="col-sm-3">
+            <h2>{{$item->price}}</h2>
             <h2>{{$item->name}}</h2>
             <h5>{{$item->description}}</h5>
+
             <br>
         </div>
         <div class="col-sm-3">

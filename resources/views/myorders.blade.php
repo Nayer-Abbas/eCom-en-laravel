@@ -2,11 +2,10 @@
 @section("content")
 <div class="container-fluid">
 <br>
-<h2>Product in Cart</h2>
-<a class="btn btn-success" href="ordernow">Order Now</a>
+<h2>My Orders</h2>
 <br>
 <br>
-@foreach ($products as $item)
+@foreach ($orders as $item)
     <div class="row cart-list-devider">
         <div class="col-sm-3 cart-items">
             <a href="detail/{{$item->id}}">    
@@ -14,13 +13,13 @@
             </a>
         </div>
         <div class="col-sm-3">
-            <h2>{{$item->name}}</h2>
-            <h5>{{$item->description}}</h5>
+            <h3>Name : {{$item->name}}</h3>
+            <h5>Delivery Status : {{$item->status}}</h5>
+            <h5>Address : {{$item->address}}</h5>
+            <h5>Payment Status : {{$item->payment_status}}</h5>
+            <h5>Payment Method : {{$item->payment_method}}</h5>
             <br>
-        </div>
-        <div class="col-sm-3">
-            <a href="/removecart/{{$item->cart_id}}" class="btn btn-danger">Remove from Cart</a>
-        </div>
+        </div>  
     </div>
     </div>
 </div>

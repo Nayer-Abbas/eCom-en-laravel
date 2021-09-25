@@ -10,6 +10,9 @@
   <body>
       {{View::make("header")}}
       @yield("content")
+      <br>
+      <br>
+      <br>
       {{View::make("footer")}}
   </body>
   <style>

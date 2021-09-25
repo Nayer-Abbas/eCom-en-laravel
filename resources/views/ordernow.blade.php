@@ -1,6 +1,8 @@
 @extends('master')
 @section("content")
 <div class="container">
+  <h3 class="text-danger">Total Amount:</h3>
+  <br>
     <div class="col-sm-10">
     <table class="table">
     <tbody>
@@ -23,18 +25,24 @@
     </tbody>
   </table>
   <div>
-  <form action="/action_page.php">
+    <h3 class="text-danger">Enter Your Address:</h3><br>
+  <form action="/orderplace" method="POST">
+  @csrf
   <div class="form-group">
-    <textarea type="email" placeholder="enter your Address" class="form-control"></textarea>
+    <textarea name="address"  placeholder="enter your Address" class="form-control" required></textarea>
   </div>
+  <h3 class="text-danger">Select Your Payment:</h3><br>
   <div class="form-group">
     <label for="pwd">Payment Method</label><br><br>
-    <input type="radio" name="payment"><span> Online Payment</span><br><br>
-    <input type="radio" name="payment"><span> Emi Payment</span><br><br>
-    <input type="radio" name="payment"><span> Payment on Delivery</span><br><br>
+    <input type="radio" value="cash" name="payment"><span>  Online Payment</span><br><br>
+    <input type="radio" value="cash" name="payment"><span>  Emi Payment</span><br><br>
+    <input type="radio" value="cash" name="payment"><span>  Payment on Delivery</span><br><br>
   </div>
     <button type="submit" class="btn btn-success">Order Now</button>
 </form>
+<br>
+<br>
+<br>
   </div>
     </div>
 </div>

@@ -16,7 +16,7 @@ if(Session::has('user'))
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">ECom Store</a>
+      <a class="navbar-brand" href="/">ECom Store</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,6 +42,7 @@ if(Session::has('user'))
       </li>
       @else
       <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
       @endif
 
       </ul>
